@@ -1,0 +1,392 @@
+<html>
+<head>
+<title>
+	PaperLooker
+</title>
+<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+</head>
+<body>
+	<div class="top_navbar">
+		<div class="Im"><a class="Images" href="https://www.google.com/imghp?hl=en&tab=wi&ei=t4VpVpKCDYjQ-QH934FA&ved=0EKouCBUoAQ">Images</a></div>
+		<div class="Ap">
+			<a class="apps" href="https://www.google.com/intl/en/options/"><img src="https://i.imgur.com/0RyduaW.png"></a>
+		</div>
+		<div class="Sign_In">
+			<a  class="sin"href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/#identifier"><img src="https://i.imgur.com/z3iZEVn.png"></a>
+		</div>
+	</div>
+	<div class="middle">
+		<div class="Google_logo">
+			<img src="{{ url_for('static', filename='logo.png') }}">
+		</div>
+		<div class="search_bar">
+			<form action="/process" method="POST" name="s_bar">
+				<input class="sbar" type="text" name="search" autofocus="autofocus"><br/>
+				<div class="s_buttonS">
+					<input class="search_button" type="submit"value="Paper Search">
+
+				</div>
+				<div class="mic">
+					<img src="https://i.imgur.com/4vobEay.png">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="bottom_navbar">
+		<div class="advertising">
+			<a >Advertising</a>
+		</div>
+		<div class="business">
+			<a >Business</a>
+		</div>
+		<div class="about">
+			<a >About</a>
+		</div>
+		<div class="privacy">
+			<a >Privacy</a>
+		</div>
+		<div class="terms">
+			<a >Terms</a>
+		</div>
+		<div class="settings">
+			<a >Settings</a>
+		</div>
+	</div>
+
+
+</body>
+
+<style>
+
+    body{
+	background-color: #fff;
+	padding: 0px;
+	margin: 0px;
+	border:0px;
+}
+.top_navbar{
+	position: absolute;
+	display: inline-block;
+	right:20px;
+}
+.Gm{
+	height: 20px;
+	width: 40px;
+	display: inline;
+	margin-right: 10px;
+}
+.Im{
+	height: 20px;
+	width: 40px;
+	display: inline;
+	margin-right: 10px;
+}
+.Ap{
+	display: inline;
+	position: relative;
+	top: 8px;
+	margin-right: 10px;
+}
+.Gmail{
+	font-family: Arial;
+	text-decoration: none;
+	color: #737373;
+	font-size: small;
+
+
+}
+.Gmail:hover{
+	text-decoration: underline;
+}
+.Images{
+	font-family: Arial;
+	text-decoration: none;
+	color: #737373;
+	font-size: small;
+
+}
+.Images:hover{
+	text-decoration: underline;
+}
+.apps{
+	float: top;
+
+}
+.Sign_In{
+	display: inline-block;
+	position: relative;
+	top: 10px;
+	margin-right: 10px;
+}
+.sin:hover{
+	cursor: default;
+}
+
+.middle{
+	margin: 0 auto;
+	position: relative;
+	height: 260px;
+	width: 660px;
+	top: 200px;
+	left: 15px;
+}
+
+.Google_logo{
+	height: 116px;
+	width: 300px;
+	position: relative;
+	margin: 0 auto;
+
+}
+
+.sbar{
+	width: 586px;
+	height: 40px;
+	border: 1px solid #D9D9D9;
+	padding: 10px;
+
+
+}
+.sbar:focus{
+	outline: none;
+	border: 1px solid #4D90FE;
+}
+.search_bar{
+	position: relative;;
+	margin: 0 auto;
+	width: 640px;
+	height: 120px;
+	top: 10px;
+	left: 15px;
+}
+.mic{
+	position: relative;
+	width: 28px;
+	height: 31px;
+	float: right;
+	top: -75px;
+	right: 60px;
+
+
+}
+.s_buttonS{
+	height: 40px;
+	width: 380px;
+	position: relative;
+	margin: 0 auto;
+	top: 30px;
+	left: 20px;
+}
+
+
+.search_button{
+	background-color: #F3F3F3;
+	color: #988478;
+	width: 126px;
+	height: 36px;
+	position: relative;
+	right: 3px;
+	border: hidden;
+	border-radius: 2px;
+}
+.search_button:hover{
+	border:1px solid #C6C6C6;
+	color: black;
+}
+.lucky_button{
+	background-color: #F3F3F3;
+	color: #988478;
+	width: 144px;
+	height: 36px;
+	position: relative;
+	left: 3px;
+	border: hidden;
+	border-radius: 2px;
+}
+.lucky_button:hover{
+	border:1px solid #C6C6C6;
+	color: black;
+}
+input[type=submit] {
+color:#757575;
+font-family: Arial;
+font-size: 13px;
+font-weight: bolder;
+}
+
+.bottom_navbar{
+	width: 100%;
+	height: 40px;
+	background-color: #F2F2F2;
+	margin: 0px;
+	padding: 0px;
+
+
+	position: fixed;
+
+	bottom: 0px;
+	border-top:1px solid #E4E4E4;
+}
+
+.advertising{
+	height: 40px;
+	width: 100px;
+	position: relative;
+	top: 12px;
+	left: 30px;
+}
+.advertising>a{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.advertising>a:visited{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.advertising>a:hover{
+	color: #666;
+	font-family: Arial;
+	text-decoration: underline;
+	font-size: small;
+}
+
+.business{
+	height: 15px;
+	width: 80px;
+	position: absolute;
+	left: 125px;
+	bottom: 13px;
+
+}
+.business>a{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.business>a:visited{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.business>a:hover{
+	color: #666;
+	font-family: Arial;
+	text-decoration: underline;
+	font-size: small;
+}
+
+.about{
+	height: 15px;
+	width: 80px;
+	position: absolute;
+	left: 210px;
+	bottom: 13px;
+
+}
+.about>a{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.about>a:visited{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.about>a:hover{
+	color: #666;
+	font-family: Arial;
+	text-decoration: underline;
+	font-size: small;
+}
+
+.privacy{
+	height: 15px;
+	width: 80px;
+	position: absolute;
+	right: 140px;
+	bottom: 13px;
+
+}
+.privacy>a{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.privacy>a:visited{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.privacy>a:hover{
+	color: #666;
+	font-family: Arial;
+	text-decoration: underline;
+	font-size: small;
+}
+
+.terms{
+	height: 15px;
+	width: 80px;
+	position: absolute;
+	right: 65px;
+	bottom: 13px;
+
+}
+.terms>a{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.terms>a:visited{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.terms>a:hover{
+	color: #666;
+	font-family: Arial;
+	text-decoration: underline;
+	font-size: small;
+}
+
+.settings{
+	height: 15px;
+	width: 80px;
+	position: absolute;
+	right: 1px;
+	bottom: 13px;
+
+}
+.settings>a{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.settings>a:visited{
+	color: #666;
+	font-family: Arial;
+	text-decoration: none;
+	font-size: small;
+}
+.settings>a:hover{
+	color: #666;
+	font-family: Arial;
+	text-decoration: underline;
+	font-size: small;
+}
+</style>
+</html>
