@@ -2,7 +2,6 @@
 ## what is PaperLooker?
 This package is the research paper search engine mainly build on the papers available at [pureportal coventry university publication][1]
 
-> This is will verify the email address. 
 ### How to install
 > STEP 1: Clone the repository
 
